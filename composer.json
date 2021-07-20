@@ -1,0 +1,24 @@
+{
+    "name": "kadhamw/vocussoap",
+    "type": "project",
+    "authors": [
+        {
+            "name": "kadhamw",
+            "email": "kade@procomputers.com.au"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "kadhamw\\VocusSOAP\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "kadhamw\\VocusSOAP\\VocusSOAPServiceProvider"
+            ]
+        }
+    },
+    "require": {}
+}
