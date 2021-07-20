@@ -17,4 +17,5 @@ class VocusSOAP
         $conn = new Connection();
         $conn->authenticate();
     }
+
 }
