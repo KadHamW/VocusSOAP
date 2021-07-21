@@ -2,7 +2,7 @@
 
 namespace kadhamw\VocusSOAP\SOAP;
 
-use KadHamW\VocusSOAP\Connection;
+use kadhamw\VocusSOAP\Connection;
 use kadhamw\VocusSOAP\Models\WsdlRequest;
 
 class GeneralFactory
