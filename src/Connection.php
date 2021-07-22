@@ -31,8 +31,8 @@ class Connection
         $Authed = false;
         $auth_url = "https://wsm.webservice.m2.com.au:9443/login/";
         $cert_pass = $this->cert_pass; # Needs to be pulled from config
-        $cert_path = storage_path('protected\production.pem');
-        $ca_path = storage_path('protected\entrust_l1k_chain_root.cer');
+        $cert_path = storage_path('protected/production.pem');
+        $ca_path = storage_path('protected/entrust_l1k_chain_root.cer');
         $headers = array();
         $headers[] = '';
         $curl = curl_init();
@@ -62,7 +62,7 @@ class Connection
     }
 
     public function request($wsdl_obj){
-        $wsdl_file = storage_path('protected\WholesaleServiceManagement.wsdl');
+        $wsdl_file = storage_path('protected/WholesaleServiceManagement.wsdl');
         $options = [
             'cache_wsdl'     => WSDL_CACHE_NONE,
             'trace'          => 1,
