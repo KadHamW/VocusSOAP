@@ -90,7 +90,7 @@ class Connection
         $client = new SoapClient($wsdl_file, $options);
 
         try{
-            Log::debug($wsdl_obj);
+            Log::debug(print_r($wsdl_obj));
             switch ($wsdl_obj->reqType) {
                 case 'GET':
                     $result = $client->Get($wsdl_obj);
@@ -107,7 +107,7 @@ class Connection
             Log::error($client->__getLastRequest());
             Log::error($fault->getMessage());
         }
-        Log::debug($result);
+        Log::debug(print_r($result));
         return($result);
     }
 
