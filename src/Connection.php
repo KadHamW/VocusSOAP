@@ -107,7 +107,7 @@ class Connection
             Log::error($client->__getLastRequest());
             Log::error($fault->getMessage());
         }
-        Log::debug(print_r($result));
+        Log::debug(print_r($result, true));
         return($result);
     }
 
