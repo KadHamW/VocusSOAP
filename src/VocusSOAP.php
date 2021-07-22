@@ -10,7 +10,8 @@ use kadhamw\VocusSOAP\SOAP\TCASFactory;
 class VocusSOAP
 {
     public function test(){
-
+        $result = NBNFactory::AddressLookup('','Alma','ST','Rockhampton','QLD');
+        dd($result);
     }
 
     public function auth(){

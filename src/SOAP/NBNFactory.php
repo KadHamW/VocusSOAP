@@ -25,7 +25,6 @@ class NBNFactory
 
         $params = $result->Parameters->Param;
         $converted = $conn->ConvertPARAMStoOBJ($params); // Change to WsdlResponse
-        if (!is_array($converted)) {$converted = [$converted];}
         return($converted);
     }
 
