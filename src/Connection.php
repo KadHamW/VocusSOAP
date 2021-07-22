@@ -90,7 +90,7 @@ class Connection
         $client = new SoapClient($wsdl_file, $options);
 
         try{
-            dump($wsdl_obj);
+            Log::debug($wsdl_obj);
             switch ($wsdl_obj->reqType) {
                 case 'GET':
                     $result = $client->Get($wsdl_obj);
@@ -104,10 +104,10 @@ class Connection
                 }
         }catch(SoapFault $fault){
             echo("Request Failed");
-            dump($client->__getLastRequest());
-            dd($fault->getMessage());
+            Log::error($client->__getLastRequest());
+            Log::error($fault->getMessage());
         }
-        dump($result);
+        Log::debug($result);
         return($result);
     }
 
