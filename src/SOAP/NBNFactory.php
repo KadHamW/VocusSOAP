@@ -25,7 +25,6 @@ class NBNFactory
 
         $params = $result->Parameters->Param;
         $converted = $conn->ConvertPARAMStoOBJ($params); // Change to WsdlResponse
-        dd($converted);
         return($converted);
     }
 
@@ -38,7 +37,6 @@ class NBNFactory
         $result = $conn->request($_wsdlobj);
 
         $params = $result->Parameters->Param;
-        dd($params);
         $converted = $conn->ConvertPARAMStoOBJ($params);
         return($converted);
     }
